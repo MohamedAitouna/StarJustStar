@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { HelloComponent } from './view/Hello.component';
+import { HelloHomeComponent } from './view/HelloHome.component';
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
-    HelloComponent
+    HelloHomeComponent
   ],
   imports: [
     RouterModule,
@@ -14,4 +14,4 @@ import { SharedModule } from '../../shared/shared.module';
   ],
   providers: []
 })
-export class HelloModule { }
+export class HelloHomeModule { }
