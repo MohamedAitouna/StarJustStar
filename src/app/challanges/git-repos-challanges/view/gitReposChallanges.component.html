@@ -1,4 +1,24 @@
 <h2>Hello Git Repos :)</h2>
-<div *ngFor="let repos of reposList">
-  <sjs-git-repos-ui [repos]="repos"></sjs-git-repos-ui>
+
+<div class="repos-table">
+  <mat-table #table [dataSource]="reposList" (scroll)="onTableScroll($event)">
+
+    <!-- Avatar Column -->
+    <ng-container matColumnDef="avatar">
+      <mat-header-cell *matHeaderCellDef> Avatar </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="flex: 0.2;">
+        <img src="{{element.owner.avatar_url}}" style=" width: 100%; "></mat-cell>
+    </ng-container>
+
+    <!-- Detail Column -->
+    <ng-container matColumnDef="detail">
+      <mat-header-cell *matHeaderCellDef> Detail </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <sjs-git-repos-ui [repos]="element"></sjs-git-repos-ui>
+      </mat-cell>
+    </ng-container>
+
+    <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+  </mat-table>
 </div>
+<!-- source : https://stackblitz.com/edit/angular-1vg9gn?file=app%2Ftable-basic-example.ts-->

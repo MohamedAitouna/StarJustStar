@@ -1,7 +1,7 @@
 
 
 import { Routes } from '@angular/router';
-import { HelloHomeComponent } from './Hello-home/view/HelloHome.component';
+import { HelloHomeComponent } from './hello-home/view/HelloHome.component';
 
 export const CoreRoutes: Routes = [
   { path: '', redirectTo: '/Hello', pathMatch: 'full' },

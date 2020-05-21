@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { CoreRoutes } from './core/core.routes';
 import { HelloModule } from './core/Hello/Hello.module';
 import { HelloComponent } from './core/Hello/view/Hello.component';
-import { HelloHomeModule } from './core/Hello-home//hello-home.module';
+import { HelloHomeModule } from './core/hello-home/hello-home.module';
 
 @NgModule({
   declarations: [

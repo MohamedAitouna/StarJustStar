@@ -11,6 +11,7 @@ const lastCurrentDate = new Date('2017-10-12');
 export class GitReposChallangesService {
 
   configUrl = 'https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=';
+  reposList = [];
   constructor(private http: HttpClient) { }
 
   getRepos(pageNumber: number = 0) {
@@ -24,9 +25,13 @@ export class GitReposChallangesService {
   private filterGitRepos(result: any): Array<any> {
     if (result && result.items) {
       console.log('result.items', result.items.length);
-      return (result.items as Array<any>).filter(item => this.checkDate(item));
+      (result.items as Array<any>).forEach(item => {
+        if (this.checkDate(item)) {
+          this.reposList.push(item);
+        }
+      })
     }
-    return [];
+    return  this.reposList;
   }
 
   private checkDate(item: any): boolean {
