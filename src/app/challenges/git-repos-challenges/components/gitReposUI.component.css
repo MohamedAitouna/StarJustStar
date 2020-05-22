@@ -1,0 +1,18 @@
+.sjs-git-repos-ui {
+  padding: 2px;
+  margin: 2px;
+}
+
+.sjs-repos-stars {
+  border: 2px solid;
+  padding: 2px;
+  margin: 2px;
+  color: lightgreen;
+}
+
+.sjs-repos-issues {
+  border: 2px solid;
+  padding: 2px;
+  margin: 2px;
+  color: crimson;
+}

@@ -5,22 +5,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 
 import { SharedModule } from '../../shared/shared.module';
-import { GitReposChallangesComponent } from './view/gitReposChallanges.component';
+import { GitReposChallengesComponent } from './view/gitReposChallenges.component';
 import { GitReposUIComponent } from './components/gitReposUI.component';
 
-export const GitReposChallangesRoutes: Routes = [{ path: '', component: GitReposChallangesComponent }];
+export const GitReposChallengesRoutes: Routes = [{ path: '', component: GitReposChallengesComponent }];
 
 @NgModule({
   declarations: [
-    GitReposChallangesComponent,
+    GitReposChallengesComponent,
     GitReposUIComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(GitReposChallangesRoutes),
+    RouterModule.forChild(GitReposChallengesRoutes),
     MatTableModule,
     SharedModule
   ],
   providers: []
 })
-export class GitReposChallangesModule { }
+export class GitReposChallengesModule { }

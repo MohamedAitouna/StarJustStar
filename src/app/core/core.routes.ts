@@ -7,7 +7,7 @@ export const CoreRoutes: Routes = [
   { path: '', redirectTo: '/Hello', pathMatch: 'full' },
   { path: 'Hello', component: HelloHomeComponent },
   {
-    path: 'Challanges', loadChildren: () => import('../challanges/challanges.module').
-      then(module => module.ChallangesModule)
+    path: 'Challenges', loadChildren: () => import('../challenges/challenges.module').
+      then(module => module.ChallengesModule)
   }
 ];

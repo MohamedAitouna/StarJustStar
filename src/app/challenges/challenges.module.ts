@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
-import { ChallangesRoutes } from './challanges.routes';
+import { ChallengesRoutes } from './challenges.routes';
 
 @NgModule({
   declarations: [
   ],
   imports: [
-    RouterModule.forChild(ChallangesRoutes),
+    RouterModule.forChild(ChallengesRoutes),
   ],
   providers: []
 })
-export class ChallangesModule { }
+export class ChallengesModule { }

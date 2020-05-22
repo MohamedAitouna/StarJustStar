@@ -1,11 +1,13 @@
 .repos-table {
   display: flex;
   flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
 }
 
 .mat-table {
   overflow: auto;
-  max-height: 500px;
+  max-height: 100vh;
+}
+
+.mat-cell, .mat-footer-cell {
+  padding: 0px 10px 0px 0;
 }

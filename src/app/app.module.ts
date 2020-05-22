@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 
 import { CoreRoutes } from './core/core.routes';
 import { HelloModule } from './core/Hello/Hello.module';
@@ -15,7 +14,6 @@ import { HelloHomeModule } from './core/hello-home/hello-home.module';
 
 @NgModule({
   declarations: [
-    AppComponent
   ],
   imports: [
     BrowserModule,
