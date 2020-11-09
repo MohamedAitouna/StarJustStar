@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import Phaser from 'phaser';
+import { MainState } from '../phaserStates/main-state';
+import { MenuState } from '../phaserStates/menu-state';
+import { SnakeState } from '../phaserStates/snake-state';
 @Component({
   selector: 'sjs-hello-home',
   templateUrl: './HelloHome.component.html',
-  styleUrls: []
+  styleUrls: ['helloHome.component.css']
 })
 export class HelloHomeComponent implements OnInit {
 
@@ -12,10 +15,13 @@ export class HelloHomeComponent implements OnInit {
   constructor() {
     this.config = {
       type: Phaser.AUTO,
-      height: 600,
       width: 800,
-      scene: [MainScene],
+      scene: [MainState, MenuState, SnakeState],
       parent: 'game',
+      backgroundColor: 0xffffff,
+      scale: {
+        mode: Phaser.Scale.ScaleModes.FIT,
+      },
       physics: {
         default: 'arcade',
         arcade: {
@@ -30,18 +36,3 @@ export class HelloHomeComponent implements OnInit {
 
 }
 
-
-class MainScene extends Phaser.Scene {
-  constructor() {
-    super({ key: 'main' });
-  }
-  create() {
-    console.log('create method');
-  }
-  preload() {
-    console.log('preload method');
-  }
-  update() {
-    // console.log('update method');
-  }
-}

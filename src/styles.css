@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+canvas {
+  display: initial!important;
+  border: 2px solid #9E9E9E;
+  box-shadow: 0 0 13px 5px #9E9E9E;
+}

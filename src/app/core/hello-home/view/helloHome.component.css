@@ -1,0 +1,25 @@
+#game {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#renderCanvas{
+	border:1px solid green;
+	touch-action:none;/*??*/
+}
+
+#renderCanvasPhaser{
+	border:1px solid blue;
+	touch-action:none;/*??*/
+}
+
+canvas {
+  display: initial!important;
+  border: 2px solid #9E9E9E;
+  box-shadow: 0 0 13px 5px #9E9E9E;
+}
+
